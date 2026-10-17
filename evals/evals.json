@@ -1,0 +1,52 @@
+{
+  "skill_name": "systemic-game-design",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Estoy haciendo un juego de supervivencia en una isla para PC, en Unity, solo. Ya tengo recolectar recursos (madera, piedra, comida), craftear herramientas y un ciclo día/noche donde de noche aparecen bichos. El problema es que en el playtest se siente como una lista de tareas: junto, crafteo, duermo, repito. Diseñame los loops del juego: cuál es el loop núcleo, qué otros loops tiene que haber, cómo se conectan entre sí y qué partes (con sus atributos y comportamientos) necesito para que pasen cosas que yo no programé a mano. Dejalo en un documento que pueda seguir.",
+      "expected_output": "Documento de diseño con loop núcleo, loops de motor/economía/ecología identificados, conexiones entre loops con refuerzo y balance, partes con atributos/estados/comportamientos, y cómo surge emergencia.",
+      "files": [],
+      "assertions": [
+        "Identifica explícitamente un loop núcleo y loops externos en distintas escalas de tiempo",
+        "Diagnostica por qué se siente lista de tareas con una causa estructural (loops lineales o desconectados, sin trade-offs, recompensa fija)",
+        "Incluye al menos un diagrama de loops con flujos de recursos (fuentes/stocks/sumideros) o con refuerzo/balance marcados",
+        "Clasifica los loops como refuerzo vs balance, o como motor/economía/ecología",
+        "Especifica partes con atributos con números o rangos concretos y con comportamientos",
+        "Describe al menos 2 situaciones emergentes concretas que surgen de la interacción entre sistemas",
+        "Señala al menos un riesgo de loop (runaway, inflación, espiral de muerte, estancamiento) y cómo se frena",
+        "Propone qué prototipar o testear primero para validar el diseño"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "tengo un roguelite de cartas parecido a slay the spire (3 actos, mapa de nodos, mazo inicial de 10 cartas, oro, tienda, reliquias). los playtesters dicen que a partir del acto 2 se aburren: casi todos ganan con el mismo mazo de ataque puro, el oro se les acumula porque la tienda no tiene nada que valga la pena y las peleas de elite se sienten iguales a las normales. Analizá qué está pasando a nivel diseño y proponeme cambios concretos, ordenados por prioridad.",
+      "expected_output": "Diagnóstico sistémico: estrategia dominante (sistema transitivo/falta de intransitividad), economía con fuente sin sumidero (inflación), falta de novedad/decisiones significativas en elites; propuestas priorizadas con causa raíz y cómo medir.",
+      "files": [],
+      "assertions": [
+        "Explica la dominancia del mazo de ataque con una causa estructural (enemigos o reglas que no castigan ni contrarrestan el ataque puro), no solo 'las cartas de ataque están fuertes'",
+        "Identifica el oro acumulado como inflación o como fuente sin sumidero valioso",
+        "Explica que las elites se sienten iguales por falta de reglas o condiciones que cambien qué decisión es la mejor (no solo más vida o daño)",
+        "Conecta los tres síntomas entre sí (p. ej., oro sin uso hace que el mazo no evolucione, lo que refuerza la dominancia)",
+        "Propone cambios concretos ordenados explícitamente por prioridad",
+        "Prefiere arreglos en el origen (counters, costos de oportunidad, sumideros) antes que solo nerfear cartas",
+        "Incluye cómo medir o validar que los cambios funcionaron (métricas o playtest)"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Estoy balanceando las armas de un shooter top-down con progresión por niveles. Armas (daño por bala / balas por segundo / cargador / recarga en s / precio en monedas): Pistola 10/4/12/1.0/0, Subfusil 6/12/30/1.8/300, Escopeta 8x6 perdigones/1.2/6/2.5/450, Rifle 35/2/10/2.0/600, Minigun 5/20/200/5.0/1200, Lanzacohetes 120 en área/0.5/1/3.0/1500. La XP para pasar del nivel n al n+1 es 100*n y cada enemigo del nivel n da 10*n de XP y 5*n monedas. ¿Está balanceado esto? ¿Hay algún arma dominante o inútil? Proponeme precios corregidos y una curva de XP/monedas mejor, con números y explicando el método para que lo pueda repetir.",
+      "expected_output": "Cálculo de DPS sostenido (considerando recarga) y valor por moneda, identificación de dominantes/inútiles, método de costo por atributo con tabla corregida, análisis de la curva de XP (enemigos por nivel constante = 10) y propuesta de curvas con números.",
+      "files": [],
+      "assertions": [
+        "Calcula DPS sostenido incluyendo recarga para las 6 armas (aprox. pistola 30, subfusil 42, escopeta 38, rifle 50, minigun 67, lanzacohetes 24 contra un blanco)",
+        "Detecta que la escopeta queda dominada por el subfusil (más cara y con menos DPS sostenido) o la marca como mal costeada",
+        "Detecta que el lanzacohetes contra un solo blanco es el peor DPS y el más caro, y que su valor depende de cuántos enemigos alcanza el área",
+        "Señala que la curva actual exige siempre la misma cantidad de enemigos por nivel (10)",
+        "Propone una tabla de precios corregidos con un número para cada arma",
+        "Propone una curva nueva de XP y/o monedas con fórmula explícita y tabla de ejemplo",
+        "Explica un método repetible paso a paso para valuar y costear armas",
+        "Relaciona la curva de monedas con los precios (en qué nivel puede comprar cada arma)"
+      ]
+    }
+  ]
+}
