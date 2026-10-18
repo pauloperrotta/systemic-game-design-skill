@@ -1,12 +1,31 @@
+<p align="center">
+  <img src="assets/banner.svg" alt="systemic-game-design: design, analyze and balance games as systems of loops" width="100%">
+</p>
+
 # systemic-game-design
 
-**A Claude skill that designs, diagnoses and balances games the way systems designers do: loops, parts, feedback, and numbers you can check.**
+<p align="center"><strong>A Claude skill that designs, diagnoses and balances games the way systems designers do: loops, parts, feedback, and numbers you can check.</strong></p>
 
-![License: MIT](https://img.shields.io/badge/license-MIT-green)
-![Claude Code skill](https://img.shields.io/badge/Claude%20Code-skill-orange)
-![Works with claude.ai](https://img.shields.io/badge/claude.ai-compatible-blue)
-![Status: pre-release](https://img.shields.io/badge/status-pre--release-yellow)
+<p align="center">
+  <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-22c55e?style=flat-square">
+  <img alt="Claude Code skill" src="https://img.shields.io/badge/Claude%20Code-skill-fb923c?style=flat-square&logo=anthropic&logoColor=white">
+  <img alt="Works with claude.ai" src="https://img.shields.io/badge/claude.ai-compatible-38bdf8?style=flat-square">
+  <img alt="Languages: English and Spanish" src="https://img.shields.io/badge/lang-EN%20%7C%20ES-a78bfa?style=flat-square">
+  <img alt="Evals: 23 of 23" src="https://img.shields.io/badge/evals-23%2F23-22c55e?style=flat-square">
+  <img alt="Status: pre-release" src="https://img.shields.io/badge/status-pre--release-eab308?style=flat-square">
+</p>
 
+<p align="center">
+  <a href="#quick-start">⚡ Quick start</a> ·
+  <a href="#install">📦 Install</a> ·
+  <a href="#how-to-trigger-it-read-this">🎯 How to trigger it</a> ·
+  <a href="#the-three-modes">🧭 Modes</a> ·
+  <a href="#example-prompts">💬 Prompts</a> ·
+  <a href="#worked-examples">📚 Examples</a> ·
+  <a href="#faq">❓ FAQ</a>
+</p>
+
+> [!NOTE]
 > Based on the method in *Advanced Game Design: A Systems Approach* by Michael Sellers (Addison-Wesley, 2018). This is an independent, unofficial project. It is **not affiliated with or endorsed by** the author or the publisher. See [Book, attribution and copyright](#book-attribution-and-copyright).
 
 ---
@@ -54,9 +73,9 @@ It covers three kinds of work:
 
 | Mode | You bring | You get |
 |---|---|---|
-| **Design** | A game idea or a half-built system | Loops (core + outer), parts with attributes and ranges, expected emergent situations, rollout order, first prototypes |
-| **Analyze** | A symptom ("players get bored in act 2") or a game to dissect | Root causes named with systems vocabulary, prioritized fixes, how to measure that they worked |
-| **Balance** | Stats, costs, XP curves, drop rates, a spreadsheet | Derived values (e.g. sustained DPS), dominated/useless options, corrected prices, curve formulas with sample tables, a repeatable method |
+| 🧩 **Design** | A game idea or a half-built system | Loops (core + outer), parts with attributes and ranges, expected emergent situations, rollout order, first prototypes |
+| 🔍 **Analyze** | A symptom ("players get bored in act 2") or a game to dissect | Root causes named with systems vocabulary, prioritized fixes, how to measure that they worked |
+| ⚖️ **Balance** | Stats, costs, XP curves, drop rates, a spreadsheet | Derived values (e.g. sustained DPS), dominated/useless options, corrected prices, curve formulas with sample tables, a repeatable method |
 
 It works for video games (Unity, Godot, anything) and for board and card games.
 
@@ -146,7 +165,8 @@ This route is untested. If you try it, please open an issue with what worked.
 
 ## How to trigger it (read this)
 
-**The skill does not always activate on its own.** This is the single most important thing to know.
+> [!IMPORTANT]
+> **The skill does not always activate on its own.** This is the single most important thing to know.
 
 In the project's own measurements (see [Evaluation results](#evaluation-results-honest-numbers)), when a game-design question arrived with no hint, Claude opened the skill only a minority of the time (roughly 1 in 10 to 1 in 5 in the test set). It never activated on unrelated questions, so it is safe to leave installed. But it is better to be explicit. Three reliable ways:
 
@@ -172,7 +192,25 @@ If Claude answers without the skill and you want the structured version, reply w
 
 The skill has one flow per mode. Claude picks the mode from your request, and many requests mix modes (it then analyzes first, then designs or balances).
 
-### 1. Design
+```mermaid
+flowchart LR
+    Q([Your request]) --> M{Which mode?}
+    M -->|build or redesign| D[🧩 Design]
+    M -->|something feels wrong| A[🔍 Analyze]
+    M -->|numbers are involved| B[⚖️ Balance]
+    D --> L[Loops and parts<br/>with ranges]
+    A --> R[Named root causes<br/>and prioritized fixes]
+    B --> T[Tables, curves<br/>and a repeatable method]
+    L --> V([What to prototype<br/>or measure next])
+    R --> V
+    T --> V
+    style D fill:#fb923c22,stroke:#fb923c
+    style A fill:#38bdf822,stroke:#38bdf8
+    style B fill:#a78bfa22,stroke:#a78bfa
+    style V fill:#22c55e22,stroke:#22c55e
+```
+
+### 🧩 1. Design
 
 Used when you create or redesign loops, mechanics, progression, crafting, an economy or emergent behavior.
 
@@ -186,7 +224,7 @@ The flow:
 6. **Predict emergence**: two or three concrete situations nobody scripted that should arise from the interaction of systems. This is the test that the design is systemic and not a feature list.
 7. **Plan the rollout** (complexity unfolds gradually) and **the first prototypes**, one question each.
 
-### 2. Analyze
+### 🔍 2. Analyze
 
 Used for "this is boring / dominated / inflated / confusing / shallow", for playtest feedback, or to dissect an existing game.
 
@@ -201,7 +239,7 @@ The flow:
 
 For analyzing an existing game (yours or someone else's), the skill carries a seven-step checklist: first-contact mental model, the whole, systems, progression loops, interactivity, parts, synthesis.
 
-### 3. Balance
+### ⚖️ 3. Balance
 
 Used whenever numbers are involved: costs, XP and level curves, damage and prices, drop rates, economy tuning.
 
@@ -310,7 +348,7 @@ Real outputs from the evaluation are in [`examples/`](examples) (in Spanish, sin
 
 ## When to use it, and when not to
 
-**Good fit**
+✅ **Good fit**
 
 - Core loops, progression, crafting, economies, difficulty curves, counters, drops.
 - "Why is this boring / grindy / dominated / confusing?"
@@ -319,7 +357,7 @@ Real outputs from the evaluation are in [`examples/`](examples) (in Spanish, sin
 - Pricing and leveling math.
 - Board and card game balance.
 
-**Poor fit** (use something else)
+🚫 **Poor fit** (use something else)
 
 | Need | Why not |
 |---|---|
@@ -331,6 +369,18 @@ Real outputs from the evaluation are in [`examples/`](examples) (in Spanish, sin
 | Level layout and art direction | Not covered |
 
 ## How it works inside
+
+The lens the skill applies to every game, at three levels, bouncing between them when one gets stuck:
+
+```mermaid
+flowchart TB
+    W["🎭 The whole<br/>experience, fantasy, theme"] <--> L["🔁 Loops<br/>engines, economies, ecologies"]
+    L <--> P["🧱 Parts<br/>attributes, ranges, behaviors"]
+    W -.->|"if one level stalls,<br/>change level"| P
+    style W fill:#a78bfa22,stroke:#a78bfa
+    style L fill:#fb923c22,stroke:#fb923c
+    style P fill:#38bdf822,stroke:#38bdf8
+```
 
 ```text
 skills/systemic-game-design/
@@ -466,7 +516,8 @@ What this means, without spin:
 - **The real difference is qualitative** and has to be judged by reading the paired outputs in [`examples/`](examples): a loop map with types and limits, named failure modes, quantified sinks, a metric per change, one-change-per-playtest discipline, a repeatable valuation method.
 - **It costs about 1.8x the tokens** of an unaided answer, mostly from reading references.
 - **Triggering is weak** when you do not ask for the skill (see [How to trigger it](#how-to-trigger-it-read-this)). A rewritten description was tested once and did not improve it; the original was kept.
-- This is a **small, early evaluation** (3 prompts, one run each). Treat it as a smoke test, not a benchmark. Contributions of harder prompts are welcome.
+> [!WARNING]
+> This is a **small, early evaluation** (3 prompts, one run each). Treat it as a smoke test, not a benchmark. Contributions of harder prompts are welcome.
 
 ## Limitations and known issues
 
