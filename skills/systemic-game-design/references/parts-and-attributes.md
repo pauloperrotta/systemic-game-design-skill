@@ -144,7 +144,7 @@ An extended example of how to find parts and attributes; summarized:
   - **Slime Rancher** (2016): slimes stack when close together (no purpose): this lets them escape from a corral to reach food (stacking + food seeking); **tabby slimes** move food they can't eat toward where food already is: it reads as theft or a gift, redistributes food, and triggers unpredictable cascades that delight.
 
 **d) Providing Feedback**
-- Closes the **interactive loop**: the player perturbs the state; the game acts with behaviors and responds. **Every verb in the game must give feedback to the player.** If a part has no behavior, or the behavior has no feedback, rigorously question whether it is needed.
+- Closes the **interactive loop**: the player perturbs the state; the game acts with behaviors and responds. **Every verb in the game must give feedback to the player.** A part with no behavior, or a behavior with no feedback, needs a strong reason to stay.
 - Feedback builds the **mental model**: learning, confirming or recreating predictions, seeing what works, evaluating one's own improvement. It sustains engagement.
 
 **Feedback and Player Expectations (three cases)**

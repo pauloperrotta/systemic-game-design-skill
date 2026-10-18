@@ -39,12 +39,12 @@ Paraphrased summary of Sellers, *Advanced Game Design: A Systems Approach* (2018
 |---|---|
 | Huizinga (Homo Ludens, 1938) | Play is absorbing, "not serious", outside ordinary life, with no material interest, within its own limits of time/space and with fixed rules -> **magic circle**. |
 | Caillois (Man, Play, and Games, 1961) | Separate from reality, neither obligatory nor profitable, governed by internal rules, with **uncertainty** (the course depends on choices). **Four types:** **agon** (competition), **alea** (chance), **mimicry** (role-playing), **ilinx** (altered perception/vertigo). Spectrum from **ludus** (rule-bound, sport-like) <-> **paidia** (spontaneous, childlike play). |
-| Crawford (1984) | Four factors: **representation, interaction, conflict, safety**. A game = a closed formal system that subjectively represents a subset of reality; explicit rules; the player "creates their story" by choosing; goals and obstacles; conflict and danger without physical consequences. |
+| Crawford (1984) | Four factors: **representation, interaction, conflict, safety**. A game is a self-contained rule system that portrays part of reality from the player's point of view; explicit rules; the player "creates their story" by choosing; goals and obstacles; conflict and danger without physical consequences. |
 | Dewey | Play keeps its "freedom from subordination to an end imposed by external necessity"; if it is tied too closely to an external need, it stops being experienced as play. |
 | Sid Meier | "A series of interesting choices" (useful because it demands meaningful, informed decisions; caveat: education and relationships are also that, and they are not games). |
 | Costikyan (1994) | An art form in which participants make **decisions to manage resources through tokens in pursuit of a goal**. It is not a puzzle (static), nor a toy (no goal), nor a story (linear); art is passive, a game demands active participation. |
 | McGonigal (2011) | Four traits: **goal, rules, feedback system, voluntary participation**. |
-| Salen & Zimmerman (2003) | "A system in which players engage in an artificial conflict, defined by rules, that results in a quantifiable outcome." |
+| Salen & Zimmerman (2003) | A rule-defined system where players contest an artificial conflict and the result can be measured. |
 | Juul | Component: **valorization of outcome** (some outcomes are better than others, encoded in the rules). |
 | Wittgenstein | Don't look for a definition common to all games: there is a "network of overlapping similarities" (family resemblance). |
 
@@ -549,7 +549,7 @@ Subsections (full list): **Working title, Concept statement, Genre(s), Target au
 ### 11.2 Section 2: Product description ("Product Description")
 Subsections (full list): **Player experience, Visual and audio style, Game world fiction, Monetization, Technology/tools/platform, Scope**. With pointers (links) to detail documents (chs. 7 and 8).
 
-- **Player Experience**: a few short paragraphs; includes the player's fantasy, **key moments** as gameplay examples and a brief discussion of what the game comes to mean to the player. It should reflect (and be reflected in) the concept statement and USPs. The main output of the blue-sky process.
+- **Player Experience**: a few short paragraphs; covers the player's fantasy, **key moments** that illustrate play, and what the game ends up meaning to the player. It should reflect (and be reflected in) the concept statement and USPs. The main output of the blue-sky process.
   - **What Is the Fantasy?**: make clear the player's point of view and what fantasy it gives (heroic knight, stealthy thief, star captain, single mother supporting her family, single-celled organism, disembodied leader of a galactic empire). Each one = a different experience.
     - Fantasies are usually **aspirational** (captain, mayor, brave fighter, wise wizard); sometimes it's being in a difficult situation and bringing out your best (The Last of Us); sometimes putting yourself in someone else's shoes (Gone Home: a girl investigating what happened in her home; The Sims: a family of your own invention).
     - Each game creates its own **magic circle**: a novel experience, separate and without consequences within its limits.

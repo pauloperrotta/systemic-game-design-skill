@@ -30,7 +30,7 @@ Short definition: **a set of parts that together form interaction loops to creat
 Expanded definition (the author's list):
 1. Systems are made of **parts**. Each part has an **internal state** and external **boundaries**. Parts interact through **behaviors** that send information or (more often) resources to other parts in order to alter their internal state.
 2. Behaviors form **loops**: local ones (A->B) and transitive ones (A->B->C->A).
-3. Systems are organized into **hierarchical integrative levels** that arise from emergent properties of their loop structures. Each level shows organized state and behavior = being a part of a larger system.
+3. Systems stack into **nested levels of organization**, each emerging from the loop structures below it. Every level has its own organized state and behavior, which makes it a part of a larger system.
 4. At every level there is **persistence and adaptability**: the system does not fall apart quickly (it reinforces itself) and it tolerates/adapts to external conditions.
 5. **Organized, decentralized yet coordinated** behavior: there is no central controller. The whole is in turn a part of a larger one.
 Corollary: top-down and bottom-up are equivalent; the designer needs to be able to see the game bottom-up, top-down, or somewhere in between.
@@ -322,7 +322,7 @@ Two variants: **boosting** (reinforces; adds resources to the game) and **brakin
 
 ### 3.2 ECONOMIES
 
-- **Operational definition**: a system dominated by a reinforcing loop where the increase in resources or value comes **not from internally investing** a resource (that is a boosting engine) but from **exchanging or converting one resource into another with a nonlinear gain in value**. Quote from Brian Giaime (2015): a game economy = the dynamic exchange of resources, time, and power between systems and entities, exchanged because players perceive a gain in value.
+- **Operational definition**: a system dominated by a reinforcing loop where growth in resources or value does **not come from reinvesting** one resource (that is a boosting engine) but from **exchanging or converting one resource into another with a nonlinear gain in value**. Quote from Brian Giaime (2015): a game economy = the dynamic exchange of resources, time, and power between systems and entities, exchanged because players perceive a gain in value.
 - **Key difference between engine and economy**: engine = same resource, investment; economy = different resources, exchange/conversion. In an economy the player uses a resource for an action or exchanges it for another that gives more capability.
 
 **The wood example (Fig. 7.9):**
@@ -342,7 +342,7 @@ Two variants: **boosting** (reinforces; adds resources to the game) and **brakin
 - Extra property: **near-universal use** (unlike resources with few uses). 1,000 coins -> training, weapons, information, or saving: many options + a feeling of valuable reward.
 - Risk: inflation and stagnation. **The player has to perceive that the currency has exchange value**, otherwise it is a nuisance. Balancing it so it keeps its value without becoming too precious is a hard problem, to be viewed **at the level of the whole economy** and not per part; it requires a lot of iterative tuning (resource creation rates, prices, etc.) to reach a stable but dynamic economy.
 
-**Economies with engines [Economies with Engines]:** it is common for an economy to have engines as subloops (selling wood for bread vs. investing it in the sawmill). Having sources whose resource can be used for internal investment or profitable exchange is the core of many good games: short-term vs. long-term gain trade-offs.
+**Economies with engines [Economies with Engines]:** economies often contain engines as subloops (sell wood for bread, or sink it into a sawmill). A source whose output can either be reinvested or traded at a profit gives you the short-term vs. long-term trade-off that many good games are built on.
 
 **Examples of economies [Examples of Economies]:**
 - **Typical RPG**: "I kill a monster, get loot, buy things". The player exchanges **time** and **character health** (and weapon/armor wear) for loot (XP, skills, better weapons/armor, gold to buy or repair). Each encounter does not guarantee a reward -> a **variable schedule** of reward: rewards at unpredictable moments; it produces more engagement (persistent, focused behavior) and dopamine spikes per reward than a regular schedule; especially useful in action/feedback interactivity; it explains why we persist in games, gambling, the stock market. **Combat** is an ecology that is a subsystem of the larger economy.
@@ -381,7 +381,7 @@ Two variants: **boosting** (reinforces; adds resources to the game) and **brakin
 2. **Balance that spins out of control -> destroys the system.**
 
 - **Resilient vs. brittle**: within a certain range the ecosystem rebalances; past a **point of no return** it no longer can. Analogy: **homeostasis** - the body keeps its temperature within a narrow range; if the stress exceeds capacity, it goes from resilient to brittle and shuts down.
-- **Practical difficulty**: it is hard to know when a system has become brittle. A sharp drop in hares can be a normal part of the cycle. With historical data you can build models: **statistical process control** - if a resource strays **more than 3 standard deviations from its historical mean**, the process is "out of control" and there is serious danger of brittleness. Problems: in dynamic systems it may be detected late, and in games there is almost never enough historical data.
+- **Practical difficulty**: it is hard to know when a system has become brittle. A sharp drop in hares can be a normal part of the cycle. With historical data you can build models: **statistical process control** - if a resource moves **more than 3 standard deviations away from its historical average**, treat the system as out of control and at serious risk of brittleness. Problems: in dynamic systems it may be detected late, and in games there is almost never enough historical data.
 - **Danger of over-controlling**:
   - **Oversteer** (overcorrection) -> another brittle failure.
   - **Forced stasis**: nailing everything down to ensure a consistent experience -> boring (no mental model to build, no decisions), and also brittle because the system does not self-balance and breaks under any outside influence. Analogy: if body temperature were pinned at 37 °C, a cold breeze or a ray of sun would drain the energy and the system would fail.
@@ -419,7 +419,7 @@ Two variants: **boosting** (reinforces; adds resources to the game) and **brakin
 
 **Habituation and utility [Habituation and Utility]:**
 - **Wanting > having** drives attention and behavior. A high goal, even a ridiculously distant one, sustains engagement. If the player feels they have achieved everything (killed the biggest boss, got the best treasure), engagement drops quickly.
-- **Hedonic fatigue**: we get used to any reward; we evaluate it relatively, not objectively. In economics: **marginal utility** (diminishing marginal utility): the first bite of ice cream is great, the third is okay, the twentieth is unwanted; it can even become negative. 20 bites are not worth 20 times one.
+- **Hedonic fatigue**: we get used to any reward; we evaluate it relatively, not objectively. In economics: **marginal utility** (diminishing marginal utility): each extra unit of the same reward is worth less than the one before, and can end up worth nothing or less. Twenty units are not worth twenty times one.
   - Note (**network effects**): sometimes marginal utility rises (telephones, building blocks, networked computers) until saturation.
 - Consequence: if the player does not feel meaningfully rewarded, they fall into the "boredom" at the lower edge of the flow channel (Fig. 4.11). **Rewards tend to grow over time -> an exponential reward curve**.
 - **Fatal side effect**: if the rate rises over time, more resources enter the game. **If sinks don't grow as fast as sources -> inflation.**
