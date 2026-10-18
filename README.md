@@ -78,7 +78,7 @@ In short: less brainstorming, more structure and arithmetic.
 Claude Code, user-level install (works in every project):
 
 ```bash
-git clone https://github.com/<your-user>/systemic-game-design-skill.git
+git clone https://github.com/pauloperrotta/systemic-game-design-skill.git
 mkdir -p ~/.claude/skills
 cp -r systemic-game-design-skill/skills/systemic-game-design ~/.claude/skills/
 ```
