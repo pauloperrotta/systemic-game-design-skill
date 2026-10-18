@@ -1,3 +1,4 @@
 *.skill
 .DS_Store
 Thumbs.db
+dist/

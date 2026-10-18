@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.1.0 (unreleased)
+## 0.1.0 - 2026-10-17
 
 - First version of the skill: `SKILL.md` with the three flows (design, analyze, balance), the vocabulary, the failure table and output formats.
 - Six reference files built from the systems-design method (loops, interactivity, parts, balance, vision and analysis, prototyping and playtest).
