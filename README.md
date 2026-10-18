@@ -337,12 +337,12 @@ skills/systemic-game-design/
 ├── SKILL.md                       ← the method: lens, vocabulary, three flows,
 │                                    failure table, principles, output formats
 └── references/                    ← detail, loaded on demand
-    ├── sistemas-y-loops.md        ← loops, engines/economies/ecologies, progression, failures
-    ├── interactividad-y-diversion.md  ← mental model, flow, interactivity budget, emotions, "fun"
-    ├── partes-y-atributos.md      ← attributes, ranges, behaviors, feedback, spreadsheets
+    ├── systems-and-loops.md        ← loops, engines/economies/ecologies, progression, failures
+    ├── interactivity-and-fun.md  ← mental model, flow, interactivity budget, emotions, "fun"
+    ├── parts-and-attributes.md      ← attributes, ranges, behaviors, feedback, spreadsheets
     ├── balance.md                 ← curves, cost-benefit, probability, economy, metrics
-    ├── vision-y-analisis.md       ← systemic model of a game, analysis checklist, concept doc
-    └── prototipado-y-playtest.md  ← prototypes, playtests, reading feedback
+    ├── vision-and-analysis.md       ← systemic model of a game, analysis checklist, concept doc
+    └── prototyping-and-playtesting.md  ← prototypes, playtests, reading feedback
 ```
 
 **Progressive disclosure.** Only the short YAML header (name and description) sits in Claude's context all the time. `SKILL.md` (about 180 lines) is read when the skill triggers. The reference files (200 to 700 lines each) are opened only when a case needs the detail. Each reference starts with an index, and `SKILL.md` tells Claude which sections to read per mode, so it does not load whole files.
@@ -354,14 +354,14 @@ skills/systemic-game-design/
 | File | Read it for |
 |---|---|
 | `SKILL.md` | The three flows, the vocabulary, the failure table, the principles, the output formats |
-| `sistemas-y-loops.md` | Reinforcing and balancing loops, sources/stocks/sinks, the three gameplay loop types (engines, economies, ecologies), core loops, progression, habituation, the extended failure catalog, the system document template |
-| `interactividad-y-diversion.md` | Player mental model, cognitive load, the six interactive loops by time scale, flow, arousal, the interactivity budget, emotions and motivations, a working definition of fun, a diagnostic checklist |
-| `partes-y-atributos.md` | Choosing minimal attributes, attribute orders (amount, rate, rate-of-rate), ranges, local and generic behaviors, feedback rules, closing loops, spreadsheet structure, data-driven design |
+| `systems-and-loops.md` | Reinforcing and balancing loops, sources/stocks/sinks, the three gameplay loop types (engines, economies, ecologies), core loops, progression, habituation, the extended failure catalog, the system document template |
+| `interactivity-and-fun.md` | Player mental model, cognitive load, the six interactive loops by time scale, flow, arousal, the interactivity budget, emotions and motivations, a working definition of fun, a diagnostic checklist |
+| `parts-and-attributes.md` | Choosing minimal attributes, attribute orders (amount, rate, rate-of-rate), ranges, local and generic behaviors, feedback rules, closing loops, spreadsheet structure, data-driven design |
 | `balance.md` | The four balancing methods, probability, cyclical vs cost-benefit balance, curve types with formulas, valuing items (Mod Value), pacing and time per level, economy balance, analytics (funnels, cohorts, retention) |
-| `vision-y-analisis.md` | The systemic model of a game (tokens and rules → mechanics → loops → whole), meaningful decisions, sources of opposition, goal types, the seven-step analysis, the concept document |
-| `prototipado-y-playtest.md` | Finding the fun fast, what a prototype is, one question per prototype, playtest scripts and surveys, reading feedback |
+| `vision-and-analysis.md` | The systemic model of a game (tokens and rules → mechanics → loops → whole), meaningful decisions, sources of opposition, goal types, the seven-step analysis, the concept document |
+| `prototyping-and-playtesting.md` | Finding the fun fast, what a prototype is, one question per prototype, playtest scripts and surveys, reading feedback |
 
-The reference files are written in Spanish (see [Language](#language)).
+A Spanish version of the whole skill lives in [`i18n/es`](i18n/es) (see [Language](#language)).
 
 ## Core concepts cheat sheet
 
@@ -472,7 +472,7 @@ What this means, without spin:
 
 - **Triggering**: see above. Ask for it by name or add the project-instructions line.
 - **Length**: reference files are long. The skill tells Claude to read by index and section, but in tests some runs still read only part of a file. If an answer looks thin, ask Claude to open a specific section.
-- **Language**: the skill content (`SKILL.md` and references) is in **Spanish**. Claude replies in the language you write in, but quality on English-only prompts has not been separately tested.
+- **Language**: the English skill is a translation of the version that was evaluated (Spanish). It has not been evaluated separately, and the evaluation prompts were in Spanish.
 - **No code execution built in**: for numeric work it relies on Claude doing arithmetic, or running scripts if its environment allows it. Ask it to compute in a script when the numbers matter.
 - **Numbers it invents are assumptions**: weights, exponents and thresholds that the book does not give are marked as the model's own. Do not treat them as canon.
 - **The book's method is not the only method.** It is one coherent, systems-based school of design. It is strong on loops, economies and balance; lighter on narrative design, level design, UX and monetization.
@@ -484,9 +484,11 @@ The book uses *transitive* for rock-paper-scissors style cycles and *intransitiv
 
 ## Language
 
-- This README and the repository documentation are in English.
-- The skill itself (`SKILL.md` and the six references) is in Spanish, because that is the language it was built and tested in. Claude answers in your language, so you can write prompts in English.
-- An English translation of the skill is on the [roadmap](#roadmap).
+- This README and the skill (`skills/systemic-game-design`) are in **English**.
+- The skill was originally written and tested in **Spanish**. That version is kept, complete, in [`i18n/es/systemic-game-design`](i18n/es/systemic-game-design). To use it, copy that folder instead of the English one. Do not install both: they share the same skill name.
+- Claude answers in the language you write in, with either version.
+- The English version is a faithful translation of the Spanish one (same structure and line counts). It has not yet been run through its own evaluation; the evaluation results below were measured on the Spanish version with Spanish prompts.
+- The files in [`examples/`](examples) are real outputs in Spanish.
 
 ## FAQ
 
@@ -526,9 +528,11 @@ Yes (MIT). Common edits: add your house rules and constraints to `SKILL.md`, add
 ├── CHANGELOG.md
 ├── CONTRIBUTING.md
 ├── skills/
-│   └── systemic-game-design/       ← the skill (copy this folder)
+│   └── systemic-game-design/       ← the skill, English (copy this folder)
 │       ├── SKILL.md
 │       └── references/             ← six topic references
+├── i18n/
+│   └── es/systemic-game-design/    ← the same skill in Spanish (original)
 ├── examples/                       ← real outputs (Spanish)
 ├── evals/
 │   └── evals.json                  ← the three evaluation prompts and their assertions
@@ -543,14 +547,14 @@ Issues and pull requests are welcome, especially:
 - **Harder evaluation prompts** with objective assertions, and results from other models.
 - **Triggering reports**: phrasings that did or did not activate the skill, and in which client.
 - **Corrections** where a reference misstates a method or a number.
-- **Translations** of `SKILL.md` and the references (see the roadmap).
+- **Translations** into other languages (the Spanish original is in `i18n/es`; keep file and section names aligned with the English version).
 - **Genre notes** (for example racing, fighting, puzzle) as new reference files, kept short and linked from `SKILL.md`.
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) first. Do not paste text from the book into issues or pull requests (see below).
 
 ## Roadmap
 
-- English version of `SKILL.md` and the references.
+- Evaluate the English version with English prompts.
 - Better activation: measure alternatives to the current description, and test a short companion instruction snippet.
 - Larger evaluation set across genres, with several runs per prompt.
 - Optional worked scripts for the balance toolkit (DPS tables, XP curves, drop probabilities).
