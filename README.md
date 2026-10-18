@@ -118,6 +118,16 @@ The skill is the folder [`skills/systemic-game-design`](skills/systemic-game-des
 
 ### Claude Code (CLI, desktop app, IDE extensions)
 
+**One command (recommended, Claude Code 2.1.275 or later):**
+
+```text
+/plugin install systemic-game-design --marketplace pauloperrotta/systemic-game-design-skill
+```
+
+This installs the English skill straight from this repository. If the command is not recognized, use the manual copy below.
+
+**Manual copy** (works on any version):
+
 **For all your projects** (user-level):
 
 | OS | Destination |

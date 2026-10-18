@@ -1,0 +1,14 @@
+{
+  "name": "systemic-game-design",
+  "owner": { "name": "Paulo Perrotta" },
+  "description": "A Claude skill to design, analyze and balance games as systems of loops.",
+  "plugins": [
+    {
+      "name": "systemic-game-design",
+      "source": "./",
+      "description": "Design, analyze and balance games as systems of loops. Based on the systems approach of Michael Sellers (unofficial).",
+      "version": "0.1.0",
+      "license": "MIT"
+    }
+  ]
+}

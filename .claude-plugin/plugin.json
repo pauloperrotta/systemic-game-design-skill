@@ -1,0 +1,10 @@
+{
+  "name": "systemic-game-design",
+  "description": "Design, analyze and balance games as systems of loops. Based on the systems approach of Michael Sellers (unofficial).",
+  "version": "0.1.0",
+  "author": { "name": "Paulo Perrotta" },
+  "homepage": "https://github.com/pauloperrotta/systemic-game-design-skill",
+  "repository": "https://github.com/pauloperrotta/systemic-game-design-skill",
+  "license": "MIT",
+  "keywords": ["game-design", "game-balance", "systems-thinking", "skill"]
+}
